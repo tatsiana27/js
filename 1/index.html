@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html>
+<head>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="plagin1.js"></script>
+<script src="plagin2.js"></script>
+
+</head>
+<body>
+ 
+<div class="content"></div>
+<div class="content1"></div>
+<script type="text/javascript">
+$('.content').myPlagin({
+	'surveyComplete' : function(data) {
+				
+		$('.content').PlaginResults({answerRes: data.point});
+	}
+});
+$('.content1').myPlagin({
+	'surveyComplete' : function(data) {
+				
+		$('.content1').PlaginResults({answerRes: data.point});
+	}
+});
+</script>
+
+
+</body>
+</html>
